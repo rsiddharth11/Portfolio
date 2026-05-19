@@ -2,88 +2,382 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Siddharth Rana - Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Siddharth Rana | Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.0/font/bootstrap-icons.css" rel="stylesheet" />
 </head>
+
 <body>
-  <header>
-    <img src="images/profile.jpg" alt="Siddharth Rana" class="profile-pic fade-in">
-    <h1 class="fade-in">Hi, I'm Siddharth Rana</h1>
-    <p class="fade-in">Aspiring Web Developer | Learning Everyday</p>
-    <nav class="fade-in">
+  <div class="page-bg"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <header class="topbar">
+    <a href="#home" class="logo">Siddharth<span> Rana</span></a>
+
+    <button class="menu-toggle" id="menuToggle">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
       <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#education">Education</a>
       <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
+      <a href="resume/SIDDARTH_RESUME.pdf" download class="resume-link">Resume</a>
     </nav>
   </header>
 
+  <section class="hero" id="home">
+    <div class="hero-content reveal">
+      <div class="available-badge">
+        <span></span>
+        Available for Opportunities
+      </div>
+
+      <h1>
+        Building Modern<br />
+        <strong>Web Experiences</strong>
+      </h1>
+
+      <p>
+        Hi, I’m Siddharth Rana, an MCA student and aspiring MERN Stack Developer.
+        I create responsive, attractive and user-friendly web applications.
+      </p>
+
+      <div class="terminal-line">
+        <i class="bi bi-terminal"></i>
+        <span id="typingText"></span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#contact" class="btn primary">Get in Touch <i class="bi bi-arrow-right"></i></a>
+        <a href="#projects" class="btn secondary">View Projects</a>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="orbit orbit-one"></div>
+      <div class="orbit orbit-two"></div>
+
+      <div class="floating-icon icon-html"><i class="bi bi-filetype-html"></i></div>
+      <div class="floating-icon icon-css"><i class="bi bi-filetype-css"></i></div>
+      <div class="floating-icon icon-js"><i class="bi bi-filetype-js"></i></div>
+      <div class="floating-icon icon-db"><i class="bi bi-database"></i></div>
+
+      <div class="profile-card" id="profileCard">
+        <div class="profile-window">
+          <span></span><span></span><span></span>
+          <p>developer.card</p>
+        </div>
+
+        <img src="images/profile.jpg" alt="Siddharth Rana" />
+
+        <h2>Siddharth Rana</h2>
+        <p class="role">MERN Stack Developer • MCA Student</p>
+
+        <div class="profile-stats">
+          <div><h3>5+</h3><p>Projects</p></div>
+          <div><h3>15+</h3><p>Skills</p></div>
+          <div><h3>100%</h3><p>Focus</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <main>
-    <section id="about" class="slide-in">
-      <h2>About Me</h2>
-      <p>Hello! I’m Siddharth Rana, an aspiring web developer building responsive, modern websites. I’m learning HTML, CSS, JavaScript, and PHP, exploring full-stack development, open-source, and new web trends. I aim to create user-friendly, accessible, innovative web solutions step by step.</p>
-    </section>
 
-    <section id="education" class="slide-in">
-      <h2>Education</h2>
-      <div class="card-list">
-        <div class="card">MCA - Charotar University (2024 - 2026)</div>
-        <div class="card">BCA - XYZ College (2021 - 2024)</div>
+    <section class="section reveal" id="about">
+      <div class="section-heading">
+        <span>About Me</span>
+        <h2>Code, creativity and continuous learning</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Who am I?</h3>
+          <p>
+            I am Siddharth Rana, an MCA student and aspiring MERN Stack Developer.
+            I enjoy building modern websites and web applications with clean UI,
+            responsive layouts and practical functionality.
+          </p>
+          <p>
+            My goal is to become a strong full-stack developer by improving my
+            frontend, backend, database and problem-solving skills through real projects.
+          </p>
+
+          <div class="about-points">
+            <div><i class="bi bi-lightning-charge"></i> Fast Learner</div>
+            <div><i class="bi bi-phone"></i> Responsive Design</div>
+            <div><i class="bi bi-code-slash"></i> Clean Code</div>
+            <div><i class="bi bi-rocket"></i> Project Builder</div>
+          </div>
+        </div>
+
+        <div class="code-panel">
+          <div class="code-top">
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="green"></span>
+            <p>developer.js</p>
+          </div>
+
+<pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">"Siddharth Rana"</span>,
+  <span class="property">role</span>: <span class="string">"MERN Stack Developer"</span>,
+  <span class="property">location</span>: <span class="string">"Ahmedabad, Gujarat, India"</span>,
+  <span class="property">skills</span>: [
+    <span class="string">"React.js"</span>,
+    <span class="string">"Node.js"</span>,
+    <span class="string">"Express.js"</span>,
+    <span class="string">"MongoDB"</span>
+  ],
+  <span class="property">mindset</span>: <span class="string">"Build → Learn → Improve"</span>
+};</code></pre>
+
+          <div class="code-badge">&lt;/&gt; Code • Create • Innovate</div>
+        </div>
       </div>
     </section>
 
-    <section id="projects" class="slide-in">
-      <h2>Projects</h2>
-      <div class="project-card">
-        <h3>Visible India Tours</h3>
-        <p>A PHP-based travel management system for booking tours and packages.</p>
+    <section class="section reveal" id="skills">
+      <div class="section-heading">
+        <span>Skills</span>
+        <h2>Technologies and tools I work with</h2>
       </div>
-      <div class="project-card">
-        <h3>Personal Portfolio</h3>
-        <p>A modern portfolio showcasing my learning journey, projects, and skills.</p>
+
+      <div class="skills-category-wrapper">
+
+        <div class="skill-category">
+          <h3><i class="bi bi-code-slash"></i> Languages</h3>
+          <div class="skills-cloud">
+            <div class="skill-item"><i class="bi bi-filetype-py"></i><p>Python</p></div>
+            <div class="skill-item"><i class="bi bi-filetype-html"></i><p>HTML</p></div>
+            <div class="skill-item"><i class="bi bi-filetype-css"></i><p>CSS</p></div>
+            <div class="skill-item"><i class="bi bi-filetype-js"></i><p>JavaScript</p></div>
+            <div class="skill-item"><i class="bi bi-database"></i><p>SQL</p></div>
+            <div class="skill-item"><i class="bi bi-filetype-php"></i><p>PHP</p></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="bi bi-box"></i> Frameworks</h3>
+          <div class="skills-cloud">
+            <div class="skill-item"><i class="bi bi-diagram-3"></i><p>Django</p></div>
+            <div class="skill-item"><i class="bi bi-node-plus"></i><p>Node.js</p></div>
+            <div class="skill-item"><i class="bi bi-hdd-network"></i><p>Express.js</p></div>
+            <div class="skill-item"><i class="bi bi-google"></i><p>Angular.js</p></div>
+            <div class="skill-item"><i class="bi bi-lightning-charge"></i><p>React.js</p></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="bi bi-server"></i> Database</h3>
+          <div class="skills-cloud">
+            <div class="skill-item"><i class="bi bi-database-fill"></i><p>SQL Server</p></div>
+            <div class="skill-item"><i class="bi bi-leaf"></i><p>MongoDB</p></div>
+            <div class="skill-item"><i class="bi bi-hdd-stack"></i><p>SQLite</p></div>
+            <div class="skill-item"><i class="bi bi-cloud"></i><p>Oracle</p></div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="bi bi-tools"></i> Tools / Platforms</h3>
+          <div class="skills-cloud">
+            <div class="skill-item"><i class="bi bi-window"></i><p>Visual Studio</p></div>
+            <div class="skill-item"><i class="bi bi-palette"></i><p>Canva</p></div>
+            <div class="skill-item"><i class="bi bi-git"></i><p>Git</p></div>
+            <div class="skill-item"><i class="bi bi-plug"></i><p>REST API</p></div>
+            <div class="skill-item"><i class="bi bi-bootstrap"></i><p>Bootstrap</p></div>
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <section id="skills" class="slide-in">
-      <h2>Skills</h2>
-      <ul class="skills-list">
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript (ES6)</li>
-        <li>Responsive Design</li>
-        <li>PHP Basics</li>
-        <li>Bootstrap</li>
-        <li>Git & GitHub</li>
-        <li>Basic SEO</li>
-        <li>MySQL Basics</li>
-        <li>Problem Solving</li>
-      </ul>
+    <section class="section reveal" id="education">
+      <div class="section-heading">
+        <span>Education</span>
+        <h2>My academic journey</h2>
+      </div>
+
+      <div class="education-wrapper">
+        <div class="education-card">
+          <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
+          <div>
+            <h3>Master of Computer Applications (MCA)</h3>
+            <h4>Charotar University of Science & Technologies, Changa</h4>
+            <p>July 2024 – July 2026</p>
+            <strong>7.44 CGPA</strong>
+          </div>
+        </div>
+
+        <div class="education-card">
+          <div class="edu-icon"><i class="bi bi-journal-code"></i></div>
+          <div>
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <h4>Charotar University of Science & Technologies, Changa</h4>
+            <p>July 2021 – April 2024</p>
+            <strong>7.74 CGPA</strong>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="resume" class="slide-in">
-      <h2>Resume</h2>
-      <p>Download my latest resume here:</p><br>
-      <a href="images/Siddharth_Rana_Resume.pdf" download class="btn">📄 Download Resume</a>
+    <section class="section reveal" id="projects">
+      <div class="section-heading">
+        <span>Projects</span>
+        <h2>Featured work and practice projects</h2>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card tilt-card">
+          <div class="project-number">01</div>
+          <i class="bi bi-hospital"></i>
+          <h3>MediSync HMS</h3>
+          <p>Hospital management system with Admin, Doctor and Patient modules.</p>
+          <div class="tags">
+            <span>React</span><span>Firebase</span><span>Dashboard</span>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card">
+          <div class="project-number">02</div>
+          <i class="bi bi-airplane-engines"></i>
+          <h3>Visible India Tours</h3>
+          <p>Travel booking system for managing tour packages and customers.</p>
+          <div class="tags">
+            <span>PHP</span><span>MySQL</span><span>CSS</span>
+          </div>
+        </div>
+
+        <div class="project-card tilt-card">
+          <div class="project-number">03</div>
+          <i class="bi bi-window-stack"></i>
+          <h3>Portfolio Website</h3>
+          <p>Responsive personal portfolio with animation, 3D UI and contact form.</p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" class="slide-in">
-      <h2>Contact</h2>
-      <p>Email: siddharth@example.com</p>
-      <p>LinkedIn: <a href="#">linkedin.com/in/siddharthrana</a></p>
+    <section class="section reveal">
+      <div class="achievement-grid">
+        <div><h3>5+</h3><p>Projects Created</p></div>
+        <div><h3>20+</h3><p>Technologies</p></div>
+        <div><h3>2+</h3><p>Years Learning</p></div>
+        <div><h3>∞</h3><p>Growth Mindset</p></div>
+      </div>
     </section>
+
+    <section class="section reveal contact-section" id="contact">
+      <div class="section-heading">
+        <span>Contact</span>
+        <h2>Let's Build Something Together</h2>
+      </div>
+
+      <div class="modern-contact-layout">
+        <div class="contact-left">
+          <h3>Have a project in mind or want to collaborate?</h3>
+          <p>Drop a message and I’ll get back to you as soon as possible.</p>
+
+          <div class="direct-contact">
+            <p>Reach Me Directly</p>
+            <a href="mailto:siddharthrana989@gmail.com">siddharthrana989@gmail.com</a>
+          </div>
+
+          <div class="contact-buttons">
+            <a href="#"><i class="bi bi-phone"></i> +91 9054533550</a>
+            <a href="#"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            <a href="#"><i class="bi bi-github"></i> GitHub</a>
+            <a href="resume/SIDDARTH_RESUME.pdf" download>
+              <i class="bi bi-download"></i> Resume
+            </a>
+          </div>
+
+          <div class="availability-box">
+            <span></span>
+            <div>
+              <h4>Currently Available</h4>
+              <p>Open to internship, freelance and full-time roles</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="modern-contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="input-box">
+              <label>FULL NAME *</label>
+              <input type="text" id="name" placeholder="Your name" required />
+            </div>
+
+            <div class="input-box">
+              <label>PHONE NUMBER</label>
+              <input type="tel" id="mobile" placeholder="+91 98765 43210" pattern="[0-9]{10}" />
+            </div>
+          </div>
+
+          <div class="input-box">
+            <label>EMAIL ADDRESS *</label>
+            <input type="email" id="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="input-box">
+            <label>SUBJECT</label>
+            <input type="text" id="subject" placeholder="Project inquiry / Collaboration" />
+          </div>
+
+          <div class="input-box">
+            <label>MESSAGE *</label>
+            <textarea id="message" rows="6" placeholder="Tell me about your project..." required></textarea>
+          </div>
+
+          <button type="submit">
+            Send Message <i class="bi bi-arrow-right"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
-    <p>&copy; 2025 Siddharth Rana | All rights reserved</p>
-    <p>Connect with me: 
-      <a href="#">LinkedIn</a> | 
-      <a href="#">GitHub</a>
-    </p>
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Siddharth Rana</h3>
+        <p>
+          Aspiring MERN Stack Developer focused on clean code, responsive design,
+          attractive UI and practical web applications.
+        </p>
+      </div>
+
+      <div>
+        <h4>Navigation</h4>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>Email: siddharthrana989@gmail.com</p>
+        <p>Mobile: +91 9054533550</p>
+        <p>Location: Ahmedabad, Gujarat, India</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Siddharth Rana. All Rights Reserved.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
+
